@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guía Visual de Licencias y Derechos de Autor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#e9ecff; --ink:#1d1a4a; --muted:#4b4a7a; --card:#ffffff;
+  --indigo:#2b2a8c; --violet:#7c3aed; --blue:#2563eb; --green:#16a34a; --mint:#d9f7e4; --lav:#ece6ff; --sky:#dbe8ff;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14123a}}
+:root[data-theme="dark"]{--bg:#14123a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:Nunito,system-ui,sans-serif;color:var(--ink);line-height:1.5;padding:16px}
+h1,h2,h3,.f{font-family:Fredoka,Nunito,system-ui,sans-serif}
+.poster{max-width:1100px;margin:0 auto;background:#f7f8ff;border-radius:32px;overflow:hidden;box-shadow:0 20px 50px rgba(43,42,140,.25)}
+header{background:linear-gradient(120deg,var(--indigo),var(--violet) 60%,var(--blue));color:#fff;padding:40px 32px;text-align:center}
+header h1{margin:0 0 8px;font-size:clamp(1.9rem,5vw,3.2rem);line-height:1.1;font-weight:700}
+header p{margin:0;font-size:clamp(1rem,2.3vw,1.25rem);opacity:.95}
+.badge{display:inline-flex;gap:10px;margin-bottom:14px}
+.badge span{width:48px;height:48px;border-radius:50%;background:#fff;color:var(--indigo);display:grid;place-items:center;font:700 1.5rem Fredoka,sans-serif}
+section{padding:32px}
+section h2{margin:0 0 18px;font-size:clamp(1.3rem,3vw,1.8rem);color:var(--indigo);display:flex;align-items:center;gap:12px}
+section h2 i{font-style:normal;background:var(--violet);color:#fff;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;flex:none;font-size:1.1rem}
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--card);border-radius:24px;padding:22px;box-shadow:0 6px 18px rgba(43,42,140,.12);border-top:8px solid var(--c,var(--violet));color:#1d1a4a}
+.card h3{margin:10px 0 4px;font-size:1.35rem;color:var(--c,var(--violet))}
+.card .tag{font-weight:800;font-size:.95rem;margin:0 0 8px}
+.card p{margin:0 0 8px;font-size:1rem}
+.sym{width:76px;height:76px;border-radius:22px;display:grid;place-items:center;background:var(--bgc,var(--lav));color:var(--c,var(--violet))}
+.sym svg{width:44px;height:44px}
+.big{font:700 2.4rem Fredoka,sans-serif}
+.note{background:var(--mint);border-radius:14px;padding:8px 12px;font-weight:800;font-size:.92rem;color:#0b5a28}
+.band{background:#eef0ff}
+.sym-btn{all:unset;box-sizing:border-box;cursor:pointer;display:block;width:100%;background:#fff;color:#1d1a4a;border-radius:24px;padding:20px;box-shadow:0 6px 18px rgba(43,42,140,.12);border:3px solid transparent;transition:border-color .15s,transform .15s}
+.sym-btn:focus-visible{outline:4px solid var(--blue);outline-offset:3px}
+.sym-btn[aria-pressed="true"]{border-color:var(--c);transform:translateY(-3px)}
+.sym-btn h3{margin:10px 0 2px;color:var(--c);font-size:1.25rem}
+.sym-btn .st{display:inline-block;margin-top:8px;font-weight:800;font-size:.85rem;padding:3px 12px;border-radius:99px;background:#eceaf7;color:#4b4a7a}
+.sym-btn[aria-pressed="true"] .st{background:var(--c);color:#fff}
+.sym-btn p{margin:0;font-size:.98rem}
+.hint{margin:0 0 16px;color:var(--muted);font-weight:600}
+.result{margin-top:20px;background:linear-gradient(120deg,var(--indigo),var(--violet));color:#fff;border-radius:24px;padding:22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.result .code{font:700 clamp(1.5rem,4vw,2.3rem) Fredoka,sans-serif;background:#fff;color:var(--indigo);border-radius:18px;padding:8px 20px}
+.result p{margin:0;flex:1 1 260px;font-size:1.05rem}
+.ex{--c:var(--green)}
+.ex .code2{display:inline-block;font:700 1.5rem Fredoka,sans-serif;background:var(--c);color:#fff;border-radius:14px;padding:4px 16px;margin-bottom:6px}
+.ex ul{margin:6px 0 0;padding-left:20px}
+footer{background:var(--indigo);color:#fff;padding:28px 32px;display:grid;gap:16px}
+.tip{background:#fff;color:#1d1a4a;border-radius:22px;padding:18px 22px;border-left:10px solid var(--green)}
+.tip b{font-family:Fredoka,sans-serif;color:var(--green);font-size:1.15rem}
+.lic{text-align:center;font-weight:600;opacity:.95}
+@media print{body{background:#fff;padding:0}.poster{box-shadow:none;border-radius:0}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<main class="poster">
+<header>
+  <div class="badge" aria-hidden="true"><span>©</span><span>Ø</span><span>CC</span></div>
+  <h1>Guía Visual de Licencias y Derechos de Autor</h1>
+  <p>¿Cómo usar y compartir recursos en la red? | Tecnología y Digitalización I (1º ESO)</p>
+</header>
+
+<section>
+  <h2><i>1</i>Los tres grandes tipos de licencias</h2>
+  <div class="grid g3">
+    <article class="card" style="--c:#2b2a8c">
+      <div class="sym" style="--c:#2b2a8c;--bgc:#dfe0ff"><span class="big">©</span></div>
+      <h3>Copyright</h3>
+      <p class="tag">«Todos los derechos reservados»</p>
+      <p>Necesitas el permiso expreso del autor para usar o modificar su obra.</p>
+    </article>
+    <article class="card" style="--c:#16a34a">
+      <div class="sym" style="--c:#16a34a;--bgc:#d9f7e4"><span class="big">Ø</span></div>
+      <h3>Dominio público</h3>
+      <p class="tag">Uso totalmente libre</p>
+      <p>Las obras pasan a dominio público cuando caducan los derechos patrimoniales: <b>70 años tras la muerte del autor</b> en España.</p>
+      <p class="note">¡Recuerda citar siempre!</p>
+    </article>
+    <article class="card" style="--c:#7c3aed">
+      <div class="sym" style="--c:#7c3aed;--bgc:#ece6ff"><span class="big">CC</span></div>
+      <h3>Creative Commons</h3>
+      <p class="tag">«Algunos derechos reservados»</p>
+      <p>Permite compartir y reutilizar la obra bajo ciertas condiciones que elige el autor.</p>
+    </article>
+  </div>
+</section>
+
+<section class="band">
+  <h2><i>2</i>Los 4 símbolos básicos de Creative Commons</h2>
+  <p class="hint">Toca los símbolos para activarlos y construye tu propia licencia. BY siempre está activo.</p>
+  <div class="grid g4">
+    <button class="sym-btn" style="--c:#2563eb" aria-pressed="true" data-k="BY" disabled>
+      <div class="sym" style="--c:#2563eb;--bgc:#dbe8ff"><svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true"><circle cx="24" cy="12" r="8"/><path d="M8 44c0-10 7-18 16-18s16 8 16 18z"/></svg></div>
+      <h3>BY · Reconocimiento</h3>
+      <p>Debes dar crédito y citar siempre al autor original.</p>
+      <span class="st">Siempre activo</span>
+    </button>
+    <button class="sym-btn" style="--c:#16a34a" aria-pressed="false" data-k="NC">
+      <div class="sym" style="--c:#16a34a;--bgc:#d9f7e4"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-hidden="true"><circle cx="24" cy="24" r="15"/><path d="M28 18.5c-1-1.6-2.7-2.5-4.3-2.5-2.6 0-4.5 1.4-4.5 3.4 0 4.6 9.6 2.4 9.6 7.2 0 2-2 3.4-4.8 3.4-2 0-3.8-1-4.8-2.6M24 12.5v23"/><path d="M6 42L42 6" stroke-width="5"/></svg></div>
+      <h3>NC · No comercial</h3>
+      <p>No puedes ganar dinero con esta obra ni usarla con fines comerciales.</p>
+      <span class="st">Desactivado</span>
+    </button>
+    <button class="sym-btn" style="--c:#7c3aed" aria-pressed="false" data-k="ND">
+      <div class="sym" style="--c:#7c3aed;--bgc:#ece6ff"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" aria-hidden="true"><path d="M10 17h28M10 31h28"/></svg></div>
+      <h3>ND · Sin obra derivada</h3>
+      <p>Puedes usar la obra, pero NO modificarla, editarla ni hacer versiones.</p>
+      <span class="st">Desactivado</span>
+    </button>
+    <button class="sym-btn" style="--c:#2b2a8c" aria-pressed="false" data-k="SA">
+      <div class="sym" style="--c:#2b2a8c;--bgc:#dfe0ff"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M38 24a14 14 0 0 0-24-9.8M10 24a14 14 0 0 0 24 9.8"/><path d="M14 6v9h9M34 42v-9h-9"/></svg></div>
+      <h3>SA · Compartir igual</h3>
+      <p>Si modificas el recurso, debes publicarlo con la misma licencia exacta.</p>
+      <span class="st">Desactivado</span>
+    </button>
+  </div>
+  <div class="result" aria-live="polite">
+    <span class="code f" id="code">CC BY</span>
+    <p id="desc"></p>
+  </div>
+</section>
+
+<section>
+  <h2><i>3</i>Combinaciones habituales en el aula</h2>
+  <div class="grid g2">
+    <article class="card ex" style="--c:#2563eb">
+      <span class="code2">CC BY-NC</span>
+      <p>Puedes usarlo para trabajos escolares, pero citando al autor y sin venderlo.</p>
+      <ul><li>Cita al autor (BY)</li><li>Nada de venderlo (NC)</li></ul>
+    </article>
+    <article class="card ex" style="--c:#16a34a">
+      <span class="code2">CC BY-SA</span>
+      <p>Ideal para proyectos colaborativos donde todo el mundo comparte en abierto.</p>
+      <ul><li>Cita al autor (BY)</li><li>Si lo mejoras, compártelo igual (SA)</li></ul>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="tip"><b>Consejo Pro para 1º ESO:</b> «Antes de descargar una imagen o música para tu proyecto, comprueba su licencia y usa bancos de recursos libres como Pixabay, Flaticon o Wikimedia Commons».</div>
+  <p class="lic">Recurso educativo bajo licencia CC BY-NC-SA 4.0</p>
+</footer>
+</main>
+
+<script>
+(function(){
+  var on={NC:false,ND:false,SA:false};
+  var btns=document.querySelectorAll('.sym-btn');
+  var txt={
+    NC:'No puedes usarla para ganar dinero.',
+    ND:'No puedes modificarla ni hacer versiones.',
+    SA:'Si la modificas, publícala con esta misma licencia.'
+  };
+  function render(){
+    var parts=['BY'];
+    ['NC','ND','SA'].forEach(function(k){if(on[k])parts.push(k)});
+    document.getElementById('code').textContent='CC '+parts.join('-');
+    var d='Cita siempre al autor.';
+    ['NC','ND','SA'].forEach(function(k){if(on[k])d+=' '+txt[k]});
+    document.getElementById('desc').textContent=d;
+    btns.forEach(function(b){
+      var k=b.dataset.k; if(k==='BY')return;
+      b.setAttribute('aria-pressed',on[k]);
+      b.querySelector('.st').textContent=on[k]?'Activado':'Desactivado';
+    });
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var k=b.dataset.k; if(k==='BY')return;
+      on[k]=!on[k];
+      if(on.ND&&on.SA){ if(k==='ND')on.SA=false; else on.ND=false; }
+      render();
+    });
+  });
+  render();
+})();
+</script>
+</body>
+</html>
